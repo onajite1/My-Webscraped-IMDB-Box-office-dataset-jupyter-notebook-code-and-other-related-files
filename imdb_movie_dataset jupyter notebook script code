@@ -1,0 +1,30 @@
+#FIRST OF ALL INSTALL THE FOLLWING LIBRARIES BEFORE IMPORTING
+## pip install pandas
+## pip install openpyxl
+## pip install plotly
+## pip install nbformat
+
+import pandas as pd
+imdb_dataset = pd.read_excel("IMDB feb 11-13 2022 movie dataset.xlsx")
+imdb_dataset
+pip install openpyxl
+imdb_dataset["MOVIE TITLE"].describe()
+imdb_dataset["WEEKEND GROSS"].describe()
+imdb_dataset["ALL TIME GROSS"].describe()
+imdb_dataset["WEEKS AVAILABLE IN THE BOX OFFICE"].describe()
+imdb_dataset.columns
+pip install plotly
+import plotly.express as px
+pip install nbformat
+import plotly.io as pio
+pio.renderers_default = "notebook_connected"
+px.histogram(imdb_dataset, x = "WEEKEND GROSS", color ="WEEKEND GROSS")
+imdb_dataset["WEEKEND GROSS"].describe()
+px.histogram(imdb_dataset, x = "ALL TIME GROSS", color ="ALL TIME GROSS") #BASED ON THE NUMBER OF WEEKS IT WAS AVAILABLE IN THE BOX OFFICE
+imdb_dataset["ALL TIME GROSS"]
+imdb_dataset[["MOVIE TITLE","ALL TIME GROSS"]]
+imdb_dataset.columns
+imdb_dataset[["MOVIE TITLE","WEEKS AVAILABLE IN THE BOX OFFICE"]]
+imdb_dataset
+px.histogram(imdb_dataset, x ="WEEKS AVAILABLE IN THE BOX OFFICE")
+px.histogram(imdb_dataset, x ="WEEKS AVAILABLE IN THE BOX OFFCE")
